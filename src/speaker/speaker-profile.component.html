@@ -1,0 +1,37 @@
+<div class="grid nested-grid">
+  <div class="col-4">
+    <p-card header="Upcoming Trips">
+      <div *ngIf="!isLoggedIn">
+        Login to see talks
+      </div>
+
+      <ng-container *ngIf="isLoggedIn">
+        <ng-container *ngFor="let talk of talks;">
+          <p>{{talk.location}} &#64; {{talk.date}}</p>
+          <p-divider/>
+        </ng-container>
+      </ng-container>
+    </p-card>
+  </div>
+
+  <div class="col-8">
+    <div class="grid">
+      <div class="col-12">
+        <p-card class="text-center" header="Robert C. Martin"/>
+      </div>
+
+      <div class="col-4">
+        <p-image
+          src="https://upload.wikimedia.org/wikipedia/commons/2/27/Robert_C._Martin_surrounded_by_computers.jpg"
+          alt="Image"
+          width="350" />
+      </div>
+
+      <div class="col-8">
+        <p-card header="About">
+          Robert Cecil Martin, colloquially called "Uncle Bob", is an American software engineer, instructor, and author. He is most recognized for promoting many software design principles and for being an author and signatory of the influential Agile Manifesto.
+        </p-card>
+      </div>
+    </div>
+  </div>
+</div>
