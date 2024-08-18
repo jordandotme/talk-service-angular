@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "trip-service-angular": {
+    "talk-service-angular": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/trip-service-angular",
+            "outputPath": "dist/talk-service-angular",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -59,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "trip-service-angular:build:production"
+              "buildTarget": "talk-service-angular:build:production"
             },
             "development": {
-              "buildTarget": "trip-service-angular:build:development"
+              "buildTarget": "talk-service-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -73,6 +73,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
+            "codeCoverage": true,
             "polyfills": [
               "zone.js",
               "zone.js/testing"
@@ -87,7 +88,8 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "karmaConfig": "karma.conf.js"
           }
         }
       }
