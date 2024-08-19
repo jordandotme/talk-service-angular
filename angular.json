@@ -85,6 +85,11 @@
                 "input": "public"
               }
             ],
+            "include": [
+              "test-setup.ts",
+              "src/**/*.spec.ts",
+              "src/**/*.d.ts"
+            ],
             "styles": [
               "src/styles.css"
             ],
